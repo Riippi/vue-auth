@@ -1,6 +1,18 @@
 # vue-auth
 
+Simple login & logout app to feel a bit how Vue.js goes with TypeScript. Uses Firebase backend.
+
+
 ## Project setup
+
+Add your own Firebase url and keys into .env file
+
+```
+VUE_APP_BASE_URL=https://add.your.firebase.url.here
+VUE_APP_AUTH_URL=https://www.googleapis.com/identitytoolkit/v3/relyingparty
+VUE_APP_FIREBASE=add your firebase key here
+```
+
 ```
 npm install
 ```

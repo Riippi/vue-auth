@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Vue.js + TypeScript + Firebase"/>
+    <HelloWorld v-if="auth" msg="Vue.js + TypeScript + Firebase"/>
+    <div v-else>Pls log in</div>
   </div>
 </template>
 
@@ -12,6 +13,11 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
   components: {
     HelloWorld,
   },
+  computed: {
+    auth() {
+      return this.$store.getters.isAuthenticated;
+    }
+  }
 })
 export default class Home extends Vue {}
 </script>
